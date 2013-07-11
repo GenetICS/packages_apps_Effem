@@ -285,7 +285,6 @@ public class FmRadioService extends Service
                 if (rdsData.containsKey("PSN")) {
                     setNotification(rdsData.getString("PSN").trim(), mCurrentFrequency);
                 }
-                
             }
         };
 
@@ -805,6 +804,10 @@ public class FmRadioService extends Service
             case AUDIO_SPEAKER: return AudioSystem.FORCE_SPEAKER;
             default:            return AudioSystem.FORCE_NONE;
         }
+    }
+
+    public void setAudioOutput(int audioOutput) {
+        mAudioOutput = audioOutput;
     }
 
     /**
